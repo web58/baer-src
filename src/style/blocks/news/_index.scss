@@ -1,0 +1,27 @@
+.news {
+  &__grid {
+    margin-bottom: 50px;
+
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

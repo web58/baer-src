@@ -1,0 +1,45 @@
+.actions {
+  padding-top: 35px;
+  padding-bottom: 40px;
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__slide {
+    height: auto;
+  }
+
+  &__pagination {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 50px;
+
+    &__title {
+      margin-bottom: 36px;
+    }
+
+    &__slider-wrapper {
+      position: relative;
+    }
+
+    &__control {
+      --gap: -54px;
+      position: absolute;
+      top: 50%;
+      left: var(--gap);
+      width: calc(100% - var(--gap) * 2);
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.partnership {
+
+  &__poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    height: 330px;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url('../img/partnership-poster.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    text-align: center;
+  }
+
+  &__tagline {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__offers {
+    margin-bottom: 60px;
+  }
+
+  &__offer {
+    margin-bottom: 20px;
+    padding: 24px;
+    border: 1px solid var(--light-gray);
+    border-radius: 18px;
+  }
+
+  &__offer-title {
+    margin-bottom: 20px;
+  }
+
+  @include media-min ($md) {
+
+    &__poster {
+      height: 390px;
+      padding: 10px;
+
+      & p {
+        width: 570px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &__descr {
+      max-width: 825px;
+    }
+
+    &__offers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    &__offer {
+      margin-bottom: 0;
+      padding: 30px;
+    }
+
+    &__offer-title {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__poster {
+      height: 624px;
+      margin-bottom: 40px;
+
+      & p {
+        width: 730px;
+      }
+    }
+
+    &__offers {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 80px;
+    }
+  }
+}

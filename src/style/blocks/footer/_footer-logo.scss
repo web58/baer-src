@@ -1,0 +1,39 @@
+.footer-logo {
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__text {
+    color: var(--dark-gray);
+    max-width: 210px;
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    grid-column: span 3;
+
+    &__text {
+      max-width: none;
+    }
+  }
+
+  @include media-min ($xl) {
+    justify-items: start;
+    grid-column: span 1;
+
+    &__link {
+      & img {
+        width: 146px;
+        height: 70px;
+      }
+    }
+
+    &__text {
+      text-align: left;
+    }
+  }
+}

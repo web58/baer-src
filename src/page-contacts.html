@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/meta.html')
+  <title>Title document</title>
+</head>
+
+<body class="indent-reset">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site-container">
+    @include('html/header/index.html')
+    <div class="site-content">
+      @include('html/breadcrumbs.html')
+      <main>
+        @include('html/contacts/index.html')
+      </main>
+    </div>
+    @include('html/footer/index.html')
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+  @include('html/scripts.html')
+</body>
+
+</html>

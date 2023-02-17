@@ -1,0 +1,39 @@
+.search {
+  padding-bottom: 50px;
+
+  &__result-text {
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__result-list {
+    margin-bottom: -20px;
+
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 60px;
+
+    &__result-list {
+      margin-bottom: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__result-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

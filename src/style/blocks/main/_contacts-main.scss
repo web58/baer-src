@@ -1,0 +1,67 @@
+.contacts-main {
+  padding-top: 60px;
+
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  &__map {
+    height: 380px;
+    background-image: url('../img/map-fallback.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  @include media-min ($md) {
+    padding-top: 80px;
+
+    &__content-wrapper {
+      display: grid;
+      grid-template-columns: 300px auto;
+      column-gap: 30px;
+    }
+
+    &__content {
+      margin-bottom: 0;
+    }
+
+    &__map {
+      height: 520px;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__content-wrapper {
+      grid-template-columns: 330px auto;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 100px;
+
+    &__title {
+      margin-bottom: 36px;
+    }
+
+    &__content-wrapper {
+      align-items: center;
+      grid-template-columns: 445px auto;
+      column-gap: 60px;
+    }
+
+    &__map {
+      height: 490px;
+    }
+  }
+}

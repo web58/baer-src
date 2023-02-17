@@ -1,0 +1,31 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import "blocks/buttons";
+@import "blocks/form";
+@import "blocks/modal";
+@import "blocks/slider";
+@import "blocks/scroll-top";
+@import "blocks/site-search";
+@import "blocks/messengers";
+@import "blocks/breadcrumbs";
+@import "blocks/pagination";
+@import "blocks/header/index";
+@import "blocks/footer/index";
+@import "blocks/product-card";
+@import "blocks/news-card";
+@import "blocks/badge";
+@import "blocks/get-catalog";
+
+@import "blocks/main/index";
+@import "blocks/about/index";
+@import "blocks/partnership/index";
+@import "blocks/news/index";
+@import "blocks/news-single/index";
+@import "blocks/contacts/index";
+@import "blocks/catalog/index";
+@import "blocks/product/index";
+@import "blocks/search/index";
+@import "blocks/404/index";

@@ -1,0 +1,44 @@
+.contact-item {
+  &__title {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    & p {
+      margin: 0;
+    }
+  }
+
+
+  &__link {
+    & a {
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    &--underline {
+      & a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__messengers {
+    padding-top: 18px;
+    padding-bottom: 30px;
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      & a {
+        transition: color .15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

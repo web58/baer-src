@@ -1,0 +1,81 @@
+.modal {
+  position: relative;
+  margin: 15px;
+  padding: 30px;
+  width: calc(100% - 30px);
+  max-width: 330px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 18px 18px 18px 0px;
+
+  &__close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__send-text {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 18px;
+  }
+
+  &__confirm {
+    margin-top: 6px;
+    color: var(--dark-gray);
+  }
+
+  &__submit {
+    margin-top: 6px;
+  }
+
+  @include media-min ($md) {
+    max-width: 500px;
+    padding: 40px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__send-text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    max-width: 600px;
+    padding: 50px;
+
+    &__close {
+      transition: color .15s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__send-text {
+      margin-bottom: 40px;
+    }
+  }
+}

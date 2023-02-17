@@ -1,0 +1,21 @@
+:root {
+  --white: #FFFFFF;
+  --white-contrast: #FAFAFA;
+  --black: #2F1A0E;
+  --accent: #F3770F;
+  --dark-gray: #8D8D8D;
+  --medium-gray: #E1E1E1;
+  --light-gray: #EEEEEE;
+
+  --black40: rgba(0, 0, 0, 0.4);
+  --error: rgba(227, 6, 19, 0.2);
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$main-font: "Jost";
+
+$mobile-min-width: 360px;

@@ -1,0 +1,97 @@
+.partnership-form {
+
+  &__tagline {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
+    padding-top: 58%;
+    background-color: var(--light-gray);
+    background-image: url('../img/partnership-form-bg.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__content {
+    padding: 24px;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 18px 18px 0 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 18px;
+  }
+
+  &__confirm {
+    margin-top: 6px;
+    color: var(--dark-gray);
+  }
+
+  &__submit {
+    margin-top: 6px;
+  }
+
+  @include media-min ($md) {
+    &__tagline {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 570px;
+    }
+
+    &__wrapper {
+      padding: 30px;
+      border-bottom-left-radius: 18px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__content {
+      margin-left: auto;
+      width: 420px;
+      padding: 30px;
+      border-bottom-right-radius: 18px;
+    }
+
+    &__btn {
+      width: auto;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__tagline {
+      max-width: 825px;
+      margin-bottom: 60px;
+    }
+
+    &__wrapper {
+      padding: 70px 80px;
+    }
+
+    &__content {
+      width: 555px;
+      padding: 40px;
+    }
+  }
+}

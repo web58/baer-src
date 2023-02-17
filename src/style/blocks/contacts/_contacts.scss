@@ -1,0 +1,49 @@
+.contacts {
+  &__map {
+    height: 200px;
+    margin-bottom: 30px;
+    background-image: url('../img/map-fallback.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__list {
+    margin-bottom: -30px;
+
+    & > li {
+      display: grid;
+      row-gap: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__map {
+      margin-bottom: 40px;
+      height: 300px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 0;
+
+      & > li {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__map {
+      height: 400px;
+    }
+
+    &__list {
+      row-gap: 50px;
+    }
+  }
+}

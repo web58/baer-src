@@ -1,0 +1,25 @@
+<section class="product">
+  <div class="container">
+    <div class="product__slider-wrapper">
+      @include('slider.html')
+    </div>
+
+    <h1 class="indent-reset hd hd--h1 product__title">Асти 2 м</h1>
+    <div class="product__short-descr">
+      <p>Прямой кухонный гарнитур, с виду ничем не примечательный, но способный обеспечить полный порядок на кухне. Множество отделений для хранения, прочные полки, стильная качественная фурнитура и необыкновенно приятные древесные оттенки фасада и корпуса – это основание для того, чтобы остановить выбор на готовом мебельном гарнитуре «Асти».</p>
+    </div>
+    <button class="btn-reset btn product__modal-btn" type="button" data-hystmodal="#request-modal">Оставить заявку</button>
+
+    <div class="product__colors-wrapper">
+      <h2 class="visually-hidden">Варианты цветов</h2>
+      <ul class="list-reset product__colors">
+        <li>@include('colors.html')</li>
+        <li>@include('colors.html')</li>
+        <li>@include('colors.html')</li>
+      </ul>
+    </div>
+
+    @include('tabs.html')
+  </div>
+</section>
+@include('../get-catalog.html')

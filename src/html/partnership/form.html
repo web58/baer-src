@@ -1,0 +1,34 @@
+<section class="partnership-form">
+  <div class="container">
+    <p class="indent-reset hd hd--h3 partnership-form__tagline">Мы делаем качественную мебель доступной. Вы не услышите от нас – такого у нас нет. Расскажите, что бы вы хотели, и наши специалисты в короткий срок воплотят ваши желания в качественной модели.</p>
+    <div class="partnership-form__wrapper">
+      <div class="partnership-form__content">
+        <h2 class="indent-reset hd hd--h1 partnership-form__title">Будем рады сотрудничеству!</h2>
+        <p class="indent-reset partnership-form__text">Заполните форму партнера – мы перезвоним вам для обсуждения всех деталей и отправим коммерческое предложение</p>
+        <form class="form partnership-form__form" id="partnership-form" data-validate>
+          <input type="hidden" name="Страница" value="Партнерам">
+          <input type="hidden" name="Форма" value="Будем рады сотрудничеству!">
+          <div>
+            <input class="form__input" type="text" name="Контактное&nbsp;лицо" placeholder="ФИО *" data-validate="text" required>
+          </div>
+          <div>
+            <input class="form__input" type="email" name="Контактный&nbsp;email" placeholder="mail@example.ru">
+          </div>
+          <div>
+            <input class="form__input" type="tel" name="Контактный&nbsp;телефон" placeholder="+7 (___) ___ __ __ *" data-validate="phone" required>
+          </div>
+          <div>
+            <textarea class="form__input form__textarea" name="Комментарий" placeholder="Комментарий"></textarea>
+          </div>
+          <div class="small partnership-form__confirm">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="partnership-checkbox" data-validate="confirm" required>
+            <label for="partnership-checkbox">@include('../confirm-text.html')</label>
+          </div>
+          <div class="partnership-form__submit">
+            <button class="btn-reset btn" type="submit">Стать партнером</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+.about-concept {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  column-gap: 36px;
+  row-gap: 24px;
+  padding: 30px;
+  color: var(--white);
+  background-color: var(--accent);
+  border-radius: 18px 18px 18px 0px;
+
+  &__title {
+    max-width: 110px;
+    grid-column: span 2;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 56px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0C8.97243 0 0 8.97243 0 20C0 31.0276 8.97243 40 20 40C31.0276 40 40 31.0276 40 20C40 8.97243 31.0276 0 20 0ZM31.1779 14.7368L18.396 27.4185C17.6441 28.1704 16.4411 28.2205 15.6391 27.4687L8.87218 21.3033C8.07018 20.5514 8.02005 19.2982 8.7218 18.4962C9.47368 17.6942 10.7268 17.6441 11.5288 18.396L16.8922 23.3083L28.3208 11.8797C29.1228 11.0777 30.3759 11.0777 31.1779 11.8797C31.9799 12.6817 31.9799 13.9348 31.1779 14.7368Z' fill='white'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+  }
+
+  @include media-min ($md) {
+    padding: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    column-gap: 30px;
+
+
+    &__title {
+      margin-bottom: 0;
+      grid-column: span 1;
+    }
+  }
+
+  @include media-min ($lg) {
+
+    &__title {
+      max-width: none;
+    }
+  }
+
+  @include media-min ($xl) {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    column-gap: 40px;
+    row-gap: 24px;
+
+    &__title {
+      max-width: 130px;
+    }
+  }
+}

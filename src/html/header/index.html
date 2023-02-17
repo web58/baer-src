@@ -1,0 +1,15 @@
+<header>
+  <div class="site-header">
+    @include('top.html')
+    @include('main.html')
+    @include('mobile-menu.html')
+    @include('nav.html')
+  </div>
+  <div class="site-header-fixed anim-drop-down">
+    <nav class="site-header-fixed__nav">
+      <div class="container site-nav" data-dropdown="desktop">
+        @include('site-nav.html')
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,15 @@
+# игнорировать файлы и каталоги сборки и зависимостей
+build/
+node_modules/
+tmp/
+
+# игнорировать файлы, созданные ОС
+ehthumbs.db
+Thumbs.db
+*.DS_Store
+
+# игнорировать файлы настроек редакторов
+/.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject

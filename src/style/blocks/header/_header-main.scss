@@ -1,0 +1,171 @@
+.header-main {
+  position: relative;
+  z-index: 2;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+  }
+
+  &__search {
+    display: none;
+  }
+
+  &__cb {
+    order: -1;
+  }
+
+  &__logo {
+    & img {
+      display: block;
+      width: 90px;
+      height: 42px;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+
+    & a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: inherit;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33.1114 23.6299C30.9073 23.6299 28.7432 23.2852 26.6924 22.6074C25.6875 22.2647 24.4522 22.5791 23.8388 23.209L19.791 26.2647C15.0967 23.7589 12.205 20.8682 9.73341 16.2091L12.6992 12.2667C13.4697 11.4972 13.7461 10.3732 13.415 9.31847C12.7343 7.25691 12.3886 5.09381 12.3886 2.88881C12.3887 1.29591 11.0928 0 9.49997 0H2.88872C1.29591 0 0 1.29591 0 2.88872C0 21.1465 14.8536 36 33.1114 36C34.7042 36 36.0001 34.7041 36.0001 33.1113V26.5185C36 24.9258 34.7041 23.6299 33.1114 23.6299Z' fill='%23F3770F'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__messengers {
+    display: none;
+  }
+
+  &__modal-btn {
+    display: none;
+  }
+
+  @include media-min ($md) {
+    &__container {
+      justify-content: flex-start;
+    }
+
+    &__logo {
+      order: -1;
+      margin-right: auto;
+    }
+
+    &__cb {
+      order: 0;
+    }
+
+    &__phone {
+      position: relative;
+      width: auto;
+      height: auto;
+      font-size: inherit;
+
+      & a {
+        position: static;
+        font-weight: 500;
+        color: var(--black);
+        text-decoration: none;
+        width: auto;
+        height: auto;
+        background-image: none;
+      }
+    }
+
+    &__burger {
+      margin-left: 40px;
+    }
+  }
+
+  @include media-min ($xl) {
+    position: static;
+
+    &__logo {
+      margin-right: 70px;
+      flex-shrink: 0;
+
+      & img {
+        width: 120px;
+        height: 57px;
+      }
+    }
+
+    &__search {
+      display: block;
+      width: 100%;
+    }
+
+    &__cb {
+      flex-shrink: 0;
+      margin-left: 30px;
+    }
+
+    &__cb-top {
+      display: flex;
+      margin-bottom: 4px;
+    }
+
+    &__phone {
+      & a {
+        transition: color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__messengers {
+      position: relative;
+      display: block;
+      margin-left: 12px;
+      padding-left: 12px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: var(--dark-gray);
+        border-radius: 99em;
+      }
+
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__modal-btn {
+      display: inline-block;
+      color: var(--dark-gray);
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+
+    &__burger {
+      display: none;
+    }
+  }
+}

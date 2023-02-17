@@ -1,0 +1,19 @@
+<section class="not-found">
+  <div class="container">
+    <h1 class="visually-hidden">Страница не найдена</h1>
+    <div class="not-found__content">
+      <picture>
+        <source type="image/webp" srcset="img/404-cover.webp">
+        <img class="not-found__cover" src="img/404-cover.png" alt="Не найдено" aria-hidden="true">
+      </picture>
+      <p class="indent-reset hd hd--h3 not-found__title">Такой страницы не существует</p>
+      <a class="not-found__link-back" href="/" id="link">Вернуться назад</a>
+    </div>
+    <script>
+      document.querySelector( '#link' ).addEventListener( 'click', ( evt ) => {
+        evt.preventDefault();
+        history.go( -1 );
+      } )
+    </script>
+  </div>
+</section>

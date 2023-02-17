@@ -1,0 +1,50 @@
+.messengers {
+  display: flex;
+  align-items: center;
+  margin: -3px;
+
+  & > li {
+    margin: 3px;
+  }
+
+  & a {
+    display: flex;
+
+    &:focus {
+      outline: none;
+      transform: scale(1.2);
+    }
+
+    & use {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  &--accent {
+    & a {
+
+      & use {
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    & a {
+      transition: transform .2s ease-in-out;
+
+      &:hover {
+        outline: none;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

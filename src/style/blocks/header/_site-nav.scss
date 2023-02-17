@@ -1,0 +1,53 @@
+.site-nav {
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  & > ul {
+    margin-left: 15px;
+  }
+
+  & a {
+    display: block;
+    padding: 12px;
+    font-size: 18px;
+    color: var(--black);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+  }
+
+  @include media-min ($sm) {
+    & > ul {
+      margin: 0;
+    }
+
+    & a {
+      padding-left: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    & > ul {
+      display: flex;
+      justify-content: space-between;
+
+      & ul {
+        display: none;
+      }
+    }
+
+    & a {
+      display: inline-block;
+      padding: 8px 0 8px;
+      border-bottom: none;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

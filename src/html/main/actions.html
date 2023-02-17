@@ -1,0 +1,33 @@
+<section class="actions">
+  <div class="container">
+    <h2 class="indent-reset hd actions__title">Акции</h2>
+    <div class="actions__slider-wrapper">
+      <div class="actions__slider slider">
+        <div class="swiper-wrapper slider__wrapper">
+          <div class="swiper-slide actions__slide">
+            @include('../product-card.html')
+          </div>
+          <div class="swiper-slide actions__slide">
+            @include('../product-card.html')
+          </div>
+          <div class="swiper-slide actions__slide">
+            @include('../product-card.html')
+          </div>
+        </div>
+      </div>
+      <div class="container actions__pagination slider__pagination"></div>
+      <div class="actions__control slider__control">
+        <button class="btn-reset actions__prev slider__nav-btn" type="button" aria-label="Предыдущий слайд">
+          <svg width="15" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-arr-left"></use>
+          </svg>
+        </button>
+        <button class="btn-reset actions__next slider__nav-btn" type="button" aria-label="Следующий слайд">
+          <svg width="15" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-arr-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

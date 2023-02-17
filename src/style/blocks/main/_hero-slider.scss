@@ -1,0 +1,40 @@
+.hero {
+  border-bottom: 1px solid var(--light-gray);
+
+  &__pagination {
+    position: absolute;
+    z-index: 1;
+    padding-left: max(39px, calc((100% - 455px) / 2));
+    padding-right: 39px;
+    padding-bottom: 10px;
+  }
+
+  @include media-min ($md) {
+
+    &__pagination {
+      padding-left: max(39px, calc((100% - 582px) / 2));
+      padding-right: max(39px, calc((100% - 520px) / 2));
+    }
+  }
+
+  @include media-min ($lg) {
+    &__pagination {
+      padding-right: max(39px, (100% - 200px) / 2);
+      padding-left: max(39px, (100% - 830px) / 2);
+    }
+  }
+
+  @include media-min ($xl) {
+    &__control {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 100%;
+      padding-left: max(15px, calc((100% - 1440px) / 2));
+      padding-right: max(15px, calc((100% - 1440px) / 2));
+      z-index: 1;
+      color: var(--white);
+    }
+  }
+}

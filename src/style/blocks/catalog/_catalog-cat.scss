@@ -1,0 +1,128 @@
+.catalog-cat {
+  position: relative;
+  padding-bottom: 88%;
+  border-radius: 18px;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--dark-gray);
+
+  &__title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    text-decoration: none;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+
+  &__title-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    height: 100%;
+  }
+
+  &__cover {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 0;
+    height: 300px;
+  }
+
+  @include media-min ($xl) {
+    height: 440px;
+    background-color: var(--accent);
+
+    &__link {
+      &::before {
+        transition: opacity .2s ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          opacity: 0;
+        }
+
+        & > span {
+          transform: translateY(calc(-50% + 24px));
+
+          & > span {
+            transform: translateY(50%);
+
+            &::after {
+              display: inline-block;
+            }
+          }
+        }
+
+        & + img {
+          opacity: 0;
+        }
+      }
+    }
+
+    &__title-wrapper {
+      padding: 36px 20px;
+      transition: transform .3s ease-in-out;
+
+      & > span {
+        transition: transform .3s ease-in-out;
+        position: relative;
+        padding-right: 36px;
+
+        &::after {
+          content: '';
+          display: none;
+          position: absolute;
+          top: 14px;
+          right: 0;
+          width: 20px;
+          height: 14px;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6133 7.95204C19.7347 7.82524 19.8299 7.67571 19.8933 7.51204C19.9639 7.35244 20.0003 7.17987 20.0003 7.00537C20.0003 6.83088 19.9639 6.65831 19.8933 6.49871C19.8299 6.33504 19.7347 6.18551 19.6133 6.05871L14.28 0.725374C14.0289 0.474302 13.6884 0.333252 13.3333 0.333252C12.9783 0.333252 12.6377 0.474303 12.3867 0.725374C12.1356 0.976446 11.9945 1.31697 11.9945 1.67204C11.9945 2.02711 12.1356 2.36764 12.3867 2.61871L15.4533 5.67204H1.33333C0.979711 5.67204 0.640573 5.81252 0.390524 6.06257C0.140476 6.31261 0 6.65175 0 7.00537C0 7.359 0.140476 7.69813 0.390524 7.94818C0.640573 8.19823 0.979711 8.33871 1.33333 8.33871H15.4533L12.3867 11.392C12.1356 11.6431 11.9945 11.9836 11.9945 12.3387C11.9945 12.6938 12.1356 13.0343 12.3867 13.2854C12.6377 13.5364 12.9783 13.6775 13.3333 13.6775C13.6884 13.6775 14.0289 13.5364 14.28 13.2854L19.6133 7.95204Z' fill='white'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          animation-name: fade-left;
+          animation-fill-mode: forwards;
+          animation-duration: .5s;
+        }
+      }
+    }
+
+    &__cover {
+      transition: opacity .3s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.catalog {
+  &__list {
+    margin-bottom: -20px;
+
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 0;
+
+      & > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__list {
+      gap: 30px;
+    }
+  }
+}

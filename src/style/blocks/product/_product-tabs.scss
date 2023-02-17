@@ -1,0 +1,53 @@
+.product-tabs {
+  &__control {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--medium-gray);
+    transition: border-color .15s ease-in-out;
+
+    &--active {
+      border-color: var(--accent);
+    }
+  }
+
+  &__descr {
+    & table {
+      & td {
+        vertical-align: top;
+        padding-top: 6px;
+        padding-bottom: 6px;
+
+        &:first-of-type {
+          color: var(--dark-gray);
+          min-width: 150px;
+        }
+      }
+    }
+  }
+
+  &__sheme {
+    margin-top: 30px;
+  }
+
+  @include media-min ($md) {
+    &__descr {
+      max-width: 730px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__descr {
+      & table {
+        & td {
+          &:first-of-type {
+            min-width: 170px;
+          }
+        }
+      }
+    }
+  }
+}

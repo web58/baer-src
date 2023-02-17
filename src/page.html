@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/meta.html')
+  <title>Title document</title>
+</head>
+
+<body class="indent-reset">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site-container">
+    @include('html/header/index.html')
+    <div class="site-content">
+      @include('html/breadcrumbs.html')
+      <main>
+        <div class="site-content__title">
+          <div class="container">
+            <h1 class="indent-reset hd hd--h1">Заголовок страницы</h1>
+          </div>
+        </div>
+        <div class="site-content__main">
+          <div class="container">
+            <h2>Заголовок 2</h2>
+            <h3>Заголовок 3</h3>
+            <h4>Заголовок 4</h4>
+            <h5>Заголовок 4</h5>
+            <h6>Заголовок 4</h6>
+            <p>Абзац Далеко-далеко за словесными горами в <a href="#">ссылка</a> гласных и согласных живут <b>жирный текст</b>. Не наш, одна коварных до правилами буквоград снова рот свое, домах все напоивший вершину взобравшись.</p>
+            <ul>
+              <li>пункт 1</li>
+              <li>пункт 2</li>
+              <li>пункт 3</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    @include('html/footer/index.html')
+  </div>
+  @include('html/scripts.html')
+</body>
+
+</html>

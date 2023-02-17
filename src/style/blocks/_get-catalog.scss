@@ -1,0 +1,76 @@
+.get-catalog {
+
+  &__wrapper {
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
+    padding-top: 58%;
+    background-image:
+      url('../img/get-catalog-cover.png'),
+      radial-gradient(79.03% 79.77% at 4.69% 63.58%, #FFE2CA 0%, #FFD1AA 100%);
+    background-position: center top, center;
+    background-repeat: no-repeat;
+    background-size: contain, auto;
+  }
+
+  &__content {
+    padding: 24px;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 18px 18px 0 0;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  @include media-min ($md) {
+    &__wrapper {
+      padding-top: 90px;
+      padding-bottom: 90px;
+      padding-right: 32px;
+      border-bottom-left-radius: 18px;
+      background-position: right 200px top 24px, center;
+    }
+
+    &__content {
+      margin-left: auto;
+      width: 336px;
+      padding: 30px;
+      border-bottom-right-radius: 18px;
+    }
+
+    &__btn {
+      width: auto;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__wrapper {
+      background-position: right 304px top 24px, center;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__wrapper {
+      padding: 62px;
+      background-position: right 445px top 24px, center;
+    }
+
+    &__content {
+      width: 385px;
+      padding: 40px;
+    }
+
+    &__text {
+      margin-bottom: 36px;
+    }
+  }
+}

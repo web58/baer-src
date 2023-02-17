@@ -1,0 +1,10 @@
+import './modules/mobile-menu.js';
+import './modules/dropdown.js';
+import './modules/observe-header.js';
+import './modules/scroll-top.js';
+import './modules/modal.js';
+import './modules/validate.js';
+import './modules/sliders.js';
+import './modules/page-settings.js';
+import './modules/map.js';
+import './modules/tabs.js';

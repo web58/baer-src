@@ -1,0 +1,47 @@
+.site-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  min-width: $mobile-min-width;
+
+  &__nav {
+    display: none;
+  }
+
+  @include media-min ($xl) {
+    position: absolute;
+
+    &__nav {
+      display: block;
+      min-height: 40px;
+      border-bottom: 1px solid var(--light-gray);
+    }
+  }
+}
+
+.site-header-fixed {
+  display: none;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+
+  &--show {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  @include media-min ($xl) {
+    &__nav {
+      display: block;
+    }
+  }
+}
