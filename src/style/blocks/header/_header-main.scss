@@ -22,8 +22,8 @@
   &__logo {
     & img {
       display: block;
-      width: 90px;
-      height: 42px;
+      width: 146px;
+      height: 32px;
     }
   }
 
@@ -63,6 +63,11 @@
     &__logo {
       order: -1;
       margin-right: auto;
+
+      & img {
+        width: 200px;
+        height: 346px;
+      }
     }
 
     &__cb {
@@ -99,8 +104,8 @@
       flex-shrink: 0;
 
       & img {
-        width: 120px;
-        height: 57px;
+        width: 220px;
+        height: 50px;
       }
     }
 
