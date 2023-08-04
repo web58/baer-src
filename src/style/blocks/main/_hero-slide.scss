@@ -18,7 +18,8 @@
     padding: 24px;
     padding-bottom: 54px;
     color: var(--black);
-    background-color: var(--white);
+    background-color: var(--white40);
+    backdrop-filter: blur(4px);
     border-radius: 18px 18px 0px 0px;
   }
 
